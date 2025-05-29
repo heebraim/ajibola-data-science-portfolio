@@ -400,7 +400,7 @@ const App = () => {
                   <p className="mb-4 opacity-80">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech, i) => (
-                      <span key={i} className={`px-3 py-1 text-sm rounded-full ${
+                      <span key={i} className={`px-3 py-1 text-sm rounded-2xl ${
                         darkMode ? 'bg-[#374151]' : 'bg-gray-200'
                       }`}>
                         {tech}
@@ -437,7 +437,7 @@ const App = () => {
                   <p className="mb-4 opacity-80">{experience.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {experience.tech.map((tech, i) => (
-                      <span key={i} className={`px-3 py-1 text-sm rounded-full ${
+                      <span key={i} className={`px-3 py-1 text-sm rounded-2xl ${
                         darkMode ? 'bg-[#374151]' : 'bg-gray-200'
                       }`}>
                         {tech}
