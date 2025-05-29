@@ -34,26 +34,26 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
-    extend: {
-      colors: {
-        light: {
-          background: '#fef9f4',
-          surface: '#fff7ed',
-          primary: '#92400e',
-          accent: '#15803d',
-          text: '#1c1917',
-          border: '#e7c9a9'
-        },
-        dark: {
-          background: '#1c1c1c',
-          surface: '#292524',
-          primary: '#ea580c',
-          accent: '#22c55e',
-          text: '#f5f5f4',
-          border: '#3f3f46'
-        }
-      }
+  extend: {
+  colors: {
+    light: {
+      background: '#f8fafc',
+      surface: '#e2e8f0',
+      primary: '#1e3a8a',
+      accent: '#2563eb',
+      text: '#1e293b',
+      border: '#94a3b8'
+    },
+    dark: {
+      background: '#0f172a',
+      surface: '#1e293b',
+      primary: '#3b82f6',
+      accent: '#60a5fa',
+      text: '#f1f5f9',
+      border: '#334155'
     }
+  }
+}
   },
   plugins: []
 };
