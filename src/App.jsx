@@ -1,328 +1,13 @@
 
 
-// import { useState } from 'react';
-// import { Link as ScrollLink } from 'react-scroll';
-// import { motion } from 'framer-motion';
-// import { FiGithub, FiLinkedin, FiMail, FiFileText, FiSun, FiMoon } from 'react-icons/fi';
-// import emailjs from 'emailjs-com';
-
-// // Initialize EmailJS (Replace with your credentials)
-// emailjs.init('YOUR_EMAILJS_USER_ID');
-
-// const colors = {
-//   light: {
-//     background: 'bg-[#f8fafc]',        // cool light gray-blue
-//     surface: 'bg-[#e2e8f0]',           // slate-100
-//     primary: 'bg-[#1e3a8a]',           // blue-800
-//     accent: 'text-[#2563eb]',          // blue-600
-//     text: 'text-[#1e293b]',            // slate-800
-//     border: 'border-[#94a3b8]'         // slate-400
-//   },
-//   dark: {
-//     background: 'bg-[#0f172a]',        // blue-black / slate-900
-//     surface: 'bg-[#1e293b]',           // slate-800
-//     primary: 'bg-[#3b82f6]',           // blue-500
-//     accent: 'text-[#60a5fa]',          // blue-400
-//     text: 'text-[#f1f5f9]',            // slate-100
-//     border: 'border-[#334155]'         // slate-700
-//   }
-// };
-
-
-
-// // Animation variants
-// const staggerContainer = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.2, delayChildren: 0.1 }
-//   }
-// };
-
-// const fadeInUp = {
-//   hidden: { opacity: 0, y: 20 },
-//   visible: { opacity: 1, y: 0 }
-// };
-
-// const App = () => {
-//   const [navOpen, setNavOpen] = useState(false);
-//   const [darkMode, setDarkMode] = useState(false);
-//   const [testimonialPage, setTestimonialPage] = useState(0);
-//   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-//   const [formStatus, setFormStatus] = useState('');
-
-//   // Update social links with your actual profiles
-//   const socialLinks = [
-//     { icon: <FiGithub />, url: 'https://github.com/Harjibola051' },
-//     { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/ajibola-hassan-18b933184' },
-//     { icon: <FiMail />, url: 'mailto:hassanajibola88@gmail.com' },
-//   ];
-  
-//     const skills = [
-//     {
-//       category: 'Data Analysis & Visualization',
-//       items: ['Excel (Pivot Tables, VLOOKUP)', 'Python (Pandas, Matplotlib, Seaborn)', 'Power BI ', ' SQL',]
-//     },
-    
-//     {
-//       category: 'Tools & Platforms',
-//       items: ['MySQL', 'Power BI Service', ' Jupyter Notebook ']
-//     },
-//     {
-//       category: 'Business Intelligence',
-//       items: [, 'KPI Analysis', 'Risk Assessment','Performance Monitoring']
-//     },
-//     {
-//       category: 'Soft Skills',
-//       items: ['Problem Solving', ' Time Management', 'Data Storytelling', 'Critical Thinking', 'Communication', 'Team Collaboration']
-//     }
-    
-//   ];
-  
-//   const projects = [
-//     {
-//       title: 'NETFLIX USER ANALYSIS.',
-//        image: '/myimg.jpg',
-//       // description: ' clone of jumia site project',
-      
-//       tech: ['Conducted an in-depth analysis of Netflix user data across 2024–2025 using interactive dashboards', 'Analyzed watch time distribution, subscription types, country-level engagement, and genre preferences', ' Identified that 40% of users watch 500+ hours/year, recommending AI-driven personalization and genre-targeted marketing', 'Proposed strategies for upselling premium plans and increasing engagement from low-watch users.'],
-//       links: {
-//       preview: '#', code: '#'
-//     }
-//     },
-//      {
-//     title: ' RETAIL/WAREHOUSE SALES ANALYSIS.',
-//      image: '/myimg.jpg',
-//     // description: 'Search products, add to cart, checkout and make payment using paystack test api key',
-//     tech: [' Designed and developed an interactive Power BI dashboard to visualize retail and warehouse sales, enabling datadriven decision-making.',
-//        ' Integrated and analyzed sales data from multiple suppliers and item categories, providing insights into sales trends,supplier performance, and inventory management. ',
-//        ' Enhanced business intelligence capabilities by incorporating dynamic filters, KPI indicators, and comparative analytics for improved operational efficiency.', 
-//        'Helped stakeholders reduce overstock by 25% through better visibility and trend analysis', 
-//        ],
-//         links: {
-//       preview: '#', code: '#'
-//     }
-   
-//   },
-   
-//     {
-//       title: 'ENERGY CONSUMPTION IN SMART HOMES',
-//        image: '/myimg.jpg',
-//       // description: 'Listen to music, search artists songs based on your mood and preference.',
-//       tech: ['  Developed predictive models using machine learning (Random Forest, XGBoost, Linear Regression) that explained over 50% of variance (R² = 0.53) in energy consumption patterns. ',
-//          'Analyzed time-series data to assess the impact of weather conditions on energy use, integrating behavioral and environmental factors for improved forecasting.',
-//           ' Delivered actionable insights through visualizations and IoT-enabled analytics, recommending energy efficiency strategies for smart homes and policy makers ',
-//            'Explained over 50% of energy variance (R² = 0.53); insights supported energy-saving decisions.'],
-//             links: {
-//       preview: '#', code: '#'
-//     }
-      
-//     },
-    
-//     {
-//       title: 'PREDICTIVE ANALYSIS ON RAINY AND SUNNY DAY IN ILORIN. ',
-//        image: '/myimg.jpg',
-//       // description: 'Lets users select from weird dillema categories, save and share dilemmas on socials.',
-//       tech: [' Developed a predictive model to forecast sunny and rainy days in Ilorin with 85% accuracy, enhancing local weather prediction and agricultural planning.', 
-//         ' Utilized meteorological software and Python for data analysis, ensuring robust methodology and reliable results', 
-//         ' Compiled detailed reports on methodologies, findings, and recommendations for future weather prediction improvements.', 
-//         ' Supported farmers and planners by improving crop scheduling through localized weather insights.' ],
-//          links: {
-//       preview: '#', code: '#'
-//     }
-     
-//     }
-//   ];
-
-//   const experience = [
-//     {
-//       title: 'DATA SCIENCE INTERN - CAREER AMEND - (Remote) – U. K APRIL 2025 – PRESENT.',
-//       // description: ' clone of jumia site project',
-//       tech: ['Engaging in a structured internship program focusing on Python fundamentals, including syntax, data types,control structures, and basic algorithms and SQL. ', 
-//         ' Participated in live online classes and interactive sessions to reinforce learning.', 
-//         ' Collaborated with peers on beginner-level coding exercises and projects to apply theoretical knowledge practically. ', ],
-      
-//     },
-//      {
-//     title: 'DATA ANALYST INTERN - OASIS INFOBYTE - (Remote) – U. K MARCH 2025',
-//     // description: 'Search products, add to cart, checkout and make payment using paystack test api key',
-//     tech: [' Developed a Customer Segmentation Model using clustering techniques (e.g., K-means) to enhance targeted marketing strategies.',
-//        ' Employed Linear Regression to predict house prices based on pertinent features thereby improving insight of real estate market trends. Improved model accuracy by 15% through feature selection and hyperparameter tunning. ',
-//        ' Collaborated with a team of interns and mentors, developing teamwork and problem-solving skills in data analytics projects.', 
-//        ],
-   
-//   },
-   
-//     {
-//       title: ' DATA SCIENCE INTERN - SHULATECH SOLUTIONS - (Remote) FEBRUARY 2025 ',
-//       // description: 'Listen to music, search artists songs based on your mood and preference.',
-//       tech: ['  Created interactive Power BI dashboards to visualize business performance and key metrics. ',
-//          'Presented findings and provided data-driven recommendations to improve business strategies.',
-//           ' Collaborated with a team of interns and mentors, enhancing teamwork and problem-solving skills in data analytics projects',
-//            'Reduced manual report generation time by 50% via automated Power BI dashboards'],
-      
-//     },
-    
-   
-//   ];
-
-//   const testimonials = [
-    
-//     { text: " University of Essex Colchester, United Kingdom ", author: "M.Sc. Data Science October 2023 — October 2024" },
-    
-//     { text: "University Of Ilorin Ilorin, Kwara. Nigeria.", author: " B.Sc. Physics. September 2016 – August 2021 " },
-//     { text: " Preparing Data for Analysis with Microsoft Excel ", author: " COURSERA certificate " },
-//     { text: " Creative Designing in Power BI  ", author: "  COURSERA certificate  " },
-//     { text: " Designing Engaging Dashboards for Health Care Analysis  ", author: "  COURSERA certificate  " },
-//     { text: " What Is Data Science ", author: "  COURSERA certificate  " }
-//   ];
-//   const handleNavClick = () => setNavOpen(false);
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setFormStatus('Sending...');
-    
-//     try {
-//       await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-//         from_name: formData.name,
-//         from_email: formData.email,
-//         message: formData.message
-//       });
-      
-//       setFormStatus('Message sent successfully!');
-//       setFormData({ name: '', email: '', message: '' });
-//       setTimeout(() => setFormStatus(''), 3000);
-//     } catch (error) {
-//       setFormStatus('Error sending message. Please try again.');
-//       console.error('Email send error:', error);
-//     }
-//   };
-
-//   const MobileNavLink = ({ to, children }) => (
-//     <ScrollLink 
-//       to={to} 
-//       smooth={true} 
-//       className="block py-2" 
-//       onClick={handleNavClick}
-//     >
-//       {children}
-//     </ScrollLink>
-//   );
-
-
-  
-//   return (
-//     <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
-//       <div className={`${darkMode ? colors.dark.background : colors.light.background} ${
-//         darkMode ? colors.dark.text : colors.light.text
-//       }`}>
-//         {/* Navigation */}
-//         <nav className={`fixed w-full z-50 ${darkMode ? colors.dark.surface : colors.light.surface} shadow-sm`}>
-//           <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
-//             <span className="font-mono text-2xl font-bold"> Hassan Ismail</span>
-            
-//             <div className="items-center hidden space-x-8 md:flex">
-//               <ScrollLink to="home" smooth={true} className="cursor-pointer">Home</ScrollLink>
-//               <ScrollLink to="about" smooth={true} className="cursor-pointer">About</ScrollLink>
-//               <ScrollLink to="projects" smooth={true} className="cursor-pointer">Projects</ScrollLink>
-//               <ScrollLink to="contact" smooth={true} className="cursor-pointer">Contact</ScrollLink>
-//               <ScrollLink to="skills" smooth={true} className="cursor-pointer">Skills</ScrollLink>
-//               <ScrollLink to="experience" smooth={true} className="cursor-pointer">Experience</ScrollLink>
-//               <ScrollLink to="testimonials" smooth={true} className="cursor-pointer">Certifications</ScrollLink>
-//               <button 
-//                 onClick={() => setDarkMode(!darkMode)}
-//                 className="p-2 rounded-lg hover:bg-opacity-20 hover:bg-gray-500"
-//               >
-//                 {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
-//               </button>
-//             </div>
-
-//             <div className="flex items-center space-x-4 md:hidden">
-//               <button 
-//                 onClick={() => setDarkMode(!darkMode)}
-//                 className="p-2"
-//               >
-//                 {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
-//               </button>
-//               <button 
-//                 className="p-2"
-//                 onClick={() => setNavOpen(!navOpen)}
-//               >
-//                 {navOpen ? '✕' : '☰'}
-//               </button>
-//             </div>
-//           </div>
-//         </nav>
-
-//         {/* Mobile Menu */}
-//         {navOpen && (
-//           <div className={`fixed inset-0 z-40 pt-16 px-4 space-y-4 ${
-//             darkMode ? colors.dark.surface : colors.light.surface
-//           }`}>
-//             <MobileNavLink to="home">Home</MobileNavLink>
-//             <MobileNavLink to="about">About</MobileNavLink>
-//             <MobileNavLink to="projects">Projects</MobileNavLink>
-//             <MobileNavLink to="contact">Contact</MobileNavLink>
-//             <MobileNavLink to="skills">Skills</MobileNavLink>
-//             <MobileNavLink to="experience">Experience</MobileNavLink>
-//             <MobileNavLink to="testimonials">Certifications</MobileNavLink>
-//           </div>
-//         )}
-
-//         {/* Hero Section */}
-//         <section id="home" className="px-4 pt-32 pb-16">
-//           <motion.div
-//             initial="hidden"
-//             animate="visible"
-//             variants={staggerContainer}
-//             className="max-w-6xl mx-auto text-center"
-//           >
-//             <motion.h1 variants={fadeInUp} className="mb-6 font-mono text-3xl font-bold">
-//             Hello, I'm Ajibola Ismail Hassan
-//             </motion.h1>
-//             <motion.p variants={fadeInUp} className="mb-8 text-xl opacity-80">
-//             "A data analyst and scientist dedicated to transforming raw data into meaningful insights using Python, SQL, and data visualization. . Focused on clarity, accuracy, and impactful storytelling through data."
-//             </motion.p>
-//             <motion.div variants={fadeInUp} className="flex justify-center mb-12 space-x-4">
-//               {/* <button className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}>
-//                 LET'S TALK
-//               </button> */}
-//               <a 
-//                 href="/AJIBOLA.pdf"  download target="_blank" rel="noopener noreferrer" 
-              
-//                 className={`flex items-center px-6 py-3 border-2 ${
-//                   darkMode ? colors.dark.border : colors.light.border
-//                 } rounded-lg`}
-//               >
-//                 <FiFileText className="mr-2" /> DOWNLOAD CV
-//               </a>
-//             </motion.div>
-//             <motion.div variants={fadeInUp} className="flex justify-center space-x-6">
-//               {socialLinks.map((link, index) => (
-//                 <motion.a
-//                   key={index}
-//                   href={link.url}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="text-2xl hover:text-blue-500"
-//                   whileHover={{ scale: 1.2 }}
-//                 >
-//                   {link.icon}
-//                 </motion.a>
-//               ))}
-//             </motion.div>
-//           </motion.div>
-//         </section>
-
 import { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiFileText, FiSun, FiMoon } from 'react-icons/fi';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 
 // Initialize EmailJS (Replace with your credentials)
-emailjs.init('YOUR_EMAILJS_USER_ID');
-
+// emailjs.init('YOUR_EMAILJS_USER_ID');
 const colors = {
   light: {
     background: 'bg-[#f8fafc]',        // cool light gray-blue
@@ -490,25 +175,35 @@ const App = () => {
     { text: " What Is Data Science ", author: "  COURSERA certificate  " }
   ];
 
-   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormStatus('Sending...');
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const { name, email, message } = formData;
+
+  const mailtoLink = `mailto:hassanajibola88@gmail.com?subject=New Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+  window.location.href = mailtoLink;
+};
+
+  //  const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setFormStatus('Sending...');
     
-    try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message
-      });
+  //   try {
+  //     await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+  //       from_name: formData.name,
+  //       from_email: formData.email,
+  //       message: formData.message
+  //     });
       
-      setFormStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus(''), 3000);
-    } catch (error) {
-      setFormStatus('Error sending message. Please try again.');
-      console.error('Email send error:', error);
-    }
-  };
+  //     setFormStatus('Message sent successfully!');
+  //     setFormData({ name: '', email: '', message: '' });
+  //     setTimeout(() => setFormStatus(''), 3000);
+  //   } catch (error) {
+  //     setFormStatus('Error sending message. Please try again.');
+  //     console.error('Email send error:', error);
+  //   }
+  // };
   // Your data arrays here (socialLinks, skills, projects, experience, testimonials)
   // Keep as-is from your code, omitted here for brevity
 
@@ -676,9 +371,17 @@ const App = () => {
                 <motion.button 
                   variants={fadeInUp}
                   className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}
+                  onClick={() => window.location.href = 'mailto:hassanajibola88@gmail.com'}
                 >
                   CONTACT ME
                 </motion.button>
+                {/* <motion.button 
+                  variants={fadeInUp}
+                  className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}
+                >
+                  CONTACT ME
+                </motion.button> */}
+
               </motion.div>
             </motion.div>
           </div>
